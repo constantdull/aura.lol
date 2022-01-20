@@ -54,6 +54,8 @@ button {
     box-sizing: border-box;
     font-size: 64px;
     animation: scroll 12s linear infinite;
+    text-shadow: 0 100vh 0 #fff, 0 -100vh 0 #fff;
+    height: 100vh;
 }
 .scroll2 p {
     animation: scroll 12s -6s linear infinite;
@@ -61,9 +63,9 @@ button {
 
 @keyframes scroll {
     0% {
-        top: 100%;
+        top: 50vh;
     }
     100% {
-        top: -100%;
+        top: -50vh;
     }
 }
