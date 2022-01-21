@@ -18,12 +18,17 @@
 -->
 
     <div class="flex">
-        <button class="mint" onclick="console.log('do something!')">MINT</button>
+        <button class="mint">MINT</button>
     </div>
 
     <nav>
         <a href="about.html"><button class="about">?</button></a>
     </nav>
+
+    <script type="module">
+        import * as eth from '/main.js';
+        document.querySelector("button").addEventListener("click", eth.mint);
+    </script>
 
     <script type="module" src="main.js"></script>
 </body>
