@@ -1,4 +1,5 @@
-import StrangeAttractors from '../../artifacts/contracts/StrangeAttractors.sol/StrangeAttractors.json'
+import StrangeAttractors from '../../artifacts/contracts/StrangeAttractors.sol/StrangeAttractors.json' // where is this file?
+import { ethers } from "/ethers-5.2.esm.min.js";
 const strangeAddress = "0x1cA15CCdd91b55CD617a48dC9eEFb98CAe224757"
 
 export const getSignedContract = () => {
@@ -17,6 +18,8 @@ export const mint = async (to, num) => {
             await contract.mint(to, num, {
                 value: num * MINT_PRICE, gasLimit: 300000
             });
+        } else {
+            alert("Unable to detect metamask.");
         }
     } catch (err) {
         console.log("Mint Error: ", err)
